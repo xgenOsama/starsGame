@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+    <script>
+        var yourAudio = document.getElementById('yourAudio'),
+    ctrl = document.getElementById('audioControl'),
+    playButton = document.getElementById('play'),
+    pauseButton = document.getElementById('pause');
+
+function toggleButton() {
+    if (playButton.style.display === 'none') {
+        playButton.style.display = 'block';
+        pauseButton.style.display = 'none';
+    } else {
+        playButton.style.display = 'none';
+        pauseButton.style.display = 'block';
+    }
+}
+
+ctrl.onclick = function () {
+
+    if (yourAudio.paused) {
+        yourAudio.play();
+    } else {
+        yourAudio.pause();
+    }
+    
+    toggleButton();
+
+    // Prevent Default Action
+    return false;
+};
+    </script>
+    <style>
+        #audioControl img {
+    width: 50px;
+    height: 50px;
+}
+
+#pause {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <!-- Insert your content here -->
+    <div class="onlineradio">
+    <img src="images/Radio.jpg" alt="" />
+    <p>
+        <audio id="yourAudio">
+            <source src='http://178.219.160.126:8000/stream.mp3' type='audio/mpeg' preload="auto" />
+        </audio>
+        <a id="audioControl" href="#">
+            <img src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/glossy-black-3d-buttons-icons-media/002110-glossy-black-3d-button-icon-media-a-media22-arrow-forward1.png" id="play"/>
+            <img src="https://www.wisc-online.com/asset-repository/getfile?id=415&getType=view" id="pause"/>
+        </a>
+    </p>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+     
+<script>
+
+
+function newDoc() {
+    window.location.assign("game.html")
+}
+    var audio;
+
+        function initAudioPlayer() {
+            audio = new Audio();
+            audio.src = "startmusic.wav";
+            audio.loop = true;
+            audio.play();
+
+        
+        }
+        window.addEventListener("load", initAudioPlayer);
+	
+</script>
+  <style>
+  
+	
+    </style>
+     <style>
+        #mycanvas{
+            border-radius: 10px;
+            margin-left: 350px;
+            margin-top : 20px;
+	    background: url(logo.png);
+	    background-size: cover;
+        }
+	#dd{
+	 
+	}
+	
+    </style>
+
+         
+</head>
+<body   style="background-color: #666666" >
+
+    
+
+<pre>
+                                                                         <img src="bbb.png" onclick="newDoc();">
+<canvas id="mycanvas"  width="600" height="500" >
+        this browser doesn't support canvass ....
+
+</canvas>
+
+</pre>
+
+
+
+</body>
+</html>
